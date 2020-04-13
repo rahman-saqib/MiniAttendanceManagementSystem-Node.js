@@ -1,0 +1,209 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+input[type=number],
+input[type=date],
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 420px;
+  margin: 0 auto;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+h1 {
+    color: black;
+    
+  }
+
+body{
+  background: skyblue;
+  color:black;
+  font-family:Helvetica, Arial, sans-serif;
+  font-size:15pt;
+}
+.bttn{ text-align: center; }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rose-pink;
+  color: white;
+  text-align: center;
+}
+.text-xs-center {
+        text-align: center;
+    }
+
+    .g-recaptcha {
+        display: inline-block;
+    }
+</style>
+<script>
+function myFunction() {
+    var a = new Date();
+    var dd = a.getDate();
+    var mm = a.getMonth()+1;
+    var yyyy = a.getFullYear();
+    if(dd<10) dd='0'+dd;
+    if(mm<10) mm='0'+mm;
+    var final = dd+'-'+mm+'-'+yyyy
+
+    document.getElementById('date').value= final;
+}
+function date123(){
+  var dateab = document.getElementById("date").value;
+  if(dateab != final){
+    alert("Please Check the date");
+  }
+  
+}
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<head>
+<title>Attendance</title>
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAA
+AAAAAAA+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/
+PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+
+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S
+0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS
+/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/w1zCv8Ncwr/DXMK/w1zCv8Ncwr/
+DXMK/z7S0v8Ncwr/PtLS/z7S0v8+0tL/PtLS/w1zCv8Ncwr/PtLS/z7S0v8+0tL/PtLS/z7S0v8+
+0tL/PtLS/w1zCv8+0tL/DXMK/z7S0v8+0tL/PtLS/z7S0v8Ncwr/PtLS/z7S0v8+0tL/PtLS/z7S
+0v8+0tL/PtLS/z7S0v8Ncwr/PtLS/w1zCv8+0tL/PtLS/z7S0v8Ncwr/DXMK/z7S0v8+0tL/PtLS
+/z7S0v8+0tL/PtLS/z7S0v8+0tL/DXMK/z7S0v8Ncwr/PtLS/z7S0v8Ncwr/DXMK/z7S0v8+0tL/
+PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/w1zCv8+0tL/DXMK/z7S0v8Ncwr/DXMK/z7S0v8+
+0tL/PtLS/z7S0v8+0tL/DXMK/w1zCv8Ncwr/DXMK/w1zCv8Ncwr/PtLS/w1zCv8Ncwr/DXMK/z7S
+0v8+0tL/PtLS/z7S0v8+0tL/PtLS/w1zCv8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8Ncwr/PtLS
+/z7S0v8Ncwr/DXMK/z7S0v8+0tL/PtLS/z7S0v8Ncwr/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/
+DXMK/z7S0v8+0tL/PtLS/z7S0v8Ncwr/PtLS/z7S0v8+0tL/DXMK/z7S0v8+0tL/PtLS/z7S0v8+
+0tL/PtLS/w1zCv8+0tL/PtLS/z7S0v8+0tL/PtLS/w1zCv8+0tL/PtLS/w1zCv8+0tL/PtLS/z7S
+0v8+0tL/PtLS/z7S0v8Ncwr/PtLS/z7S0v8+0tL/PtLS/z7S0v8Ncwr/PtLS/z7S0v8Ncwr/DXMK
+/w1zCv8Ncwr/DXMK/w1zCv8+0tL/DXMK/w1zCv8Ncwr/DXMK/w1zCv8Ncwr/PtLS/z7S0v8+0tL/
+PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+0tL/PtLS/z7S0v8+
+0tL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAA==" rel="icon" type="image/x-icon" />
+</head>
+<body onload="myFunction()" onload="date123()">
+
+<h1 style="text-align: center">Attendance</h1>
+<div class="container">
+  <form action="/thankyou" method="POST" class="main">
+  <div class="row">
+    <div class="col-25">
+      <label for="name">Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="name" name="name" placeholder="Your name.." required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="rollno">Roll No</label>
+    </div>
+    <div class="col-75">
+      <input type="number" id="rollno" name="rollnumber" placeholder="Your Roll Number" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="date">Date</label>
+    </div>
+    <div class="col-75">
+      <input type="text" class="form-control" id="date" name="date">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject" id="subject">Subject</label>
+    </div>
+    <div class="col-75">
+      <select id="subject" name="subject">
+        <option value="ssc">SSC</option>
+        <option value="urdu">Urdu</option>
+       </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="classsec">Class/Sec</label>
+    </div>
+    <div class="col-75">
+      <select id="classsec" name="classsec">
+        <option value="VI-F">VI-F</option>
+        <option value="VII-G">VII-G</option>
+        <option value="VIII-G">VIII-G</option>
+        <option value="IX-H">IX-H</option>
+        <option value="IX-D">IX-D</option>
+        <option value="IX-G">IX-G</option>
+        <option value="X-H">X-H</option>
+        <option value="X-D">X-D</option>
+        <option value="X-E">X-E</option>
+       </select><br><br>
+    </div>
+  </div>
+  <div class="bttn">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+<div class="footer">
+<p>Made by <a href="https://www.linkedin.com/in/srahman-985a7316a/">Saqib Rahman</a></p>
+</div>
+</body>
