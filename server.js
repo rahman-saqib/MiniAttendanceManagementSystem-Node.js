@@ -5,22 +5,22 @@ const { stringify } = require('querystring');
 const app = express();
 var port = process.env.PORT || 8080
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb+srv://Sam:softaweb@cluster0-xe3q0.mongodb.net/test?retryWrites=true&w=majority';
+var Recaptcha = require('express-recaptcha').RecaptchaV3;
 
 
 app.get('/form', (_, res) => res.sendFile(`${__dirname}/sites/index.html`));
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
 
 app.post('/thankyou', async (req, res) => {
-    console.log(req.body);
+    //console.log(req.body);
     res.sendFile(`${__dirname}/sites/success.html`);
     MongoClient.connect(url, function(err , db){
         var q = req.body;
         var dbo = db.db("AttendanceData");
-        console.log(q);
+        //console.log(q);
         if(err) throw err;
         dbo.collection('stuattendance').insertOne(q, function(err , result){
             if(err) throw err;
