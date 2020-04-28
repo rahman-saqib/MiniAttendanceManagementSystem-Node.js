@@ -20,7 +20,7 @@ app.post('/thankyou', async (req, res) => {
     MongoClient.connect(url, function(err , db){
         var q = req.body;
         var dbo = db.db("AttendanceData");
-        //console.log(q);
+        console.log(q);
         if(err) throw err;
         dbo.collection('stuattendance').insertOne(q, function(err , result){
             if(err) throw err;
