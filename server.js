@@ -30,9 +30,9 @@ app.get('/form', (_, res) => res.sendFile(`${__dirname}/sites/index.html`));
 app.post('/thankyou', async (req, res) => {
     //console.log(req.body);
     res.sendFile(`${__dirname}/sites/success.html`);
-    MongoClient.connect(url, function(err , db){
+    MongoClient.connect(url, function(err , client){
         var q = req.body;
-        var dbo = db.db("AttendanceData");
+        var dbo = client.db("AttendanceData");
         console.log(q);
         if(err) throw err;
         dbo.collection('stuattendance').insertOne(q, function(err , result){
@@ -47,4 +47,4 @@ app.post('/thankyou', async (req, res) => {
     
   });
 
-app.listen(port, () => console.log('Server started on port'));
+app.listen(port, () => console.log('Server started on port:8080'));
