@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "node server.js",
-    "start": "node server.js",
-  },
+    "start": "node server.js"
+},
   "author": "Saqib",
   "license": "ISC",
   "dependencies": {
