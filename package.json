@@ -17,7 +17,7 @@
     "express-recaptcha": "^5.0.1",
     "helmet": "^3.22.0",
     "mongodb": "^3.5.5",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "require": "^2.4.20",
     "uglify-js": "^3.9.0",
     "xss-clean": "^0.1.1"
