@@ -17,3 +17,6 @@ XSS, Helmet, MongoSantize middlewares to filter data and ensure security.
 2. Proper Folder Structure
 3. Refactor from Client-Server to Microservices
 4. Provisioning resources using IaC, using servless framework
+5. Security
+6. AAA
+7. IP Restriction
